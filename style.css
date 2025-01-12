@@ -63,7 +63,7 @@ to this section's matching END comment to see page-specific styles.
   box-sizing: border-box;
   border-radius: 4px;
   text-decoration: none;
-  color: #000;
+  color: #000000;
   white-space: nowrap;
   margin-left: auto;
 }
@@ -74,15 +74,13 @@ to this section's matching END comment to see page-specific styles.
   background-color: #D0FFF1;
 }
 
-nav .links {
-    float: right;
-    padding: 0;
-    margin: 0;
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #000000;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
 }
 
 nav .links a {
@@ -94,29 +92,25 @@ nav .links a {
     text-decoration: none;
     position: relative;
 }
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 nav .links a:hover {
     color: black;
-}
-
-/* Navigation grid */
-
-.footer a:not(.btn--remix):link,
-a:not(.btn--remix):visited {
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #000;
-  text-decoration: none;
-  border-style: none;
-}
-.footer a:hover {
-  background: var(--color-primary);
-}
-
-.footer .links {
-  padding: 0.5rem 1rem 1.5rem;
-  white-space: nowrap;
 }
 
 .divider {
@@ -128,7 +122,7 @@ END Glitch hello-app default styles
 
 body {
   font-family: HK Grotesk;
-  background-color: white;
+  background-color: #F0F0F0;
 }
 
 /* Page structure */
@@ -183,7 +177,9 @@ input {
 
 /* Subheading */
 h2 {
-  color: var(--color-text-header);
+  color: black;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
 }
 
 /* Interactive image */
@@ -210,12 +206,6 @@ h2 {
   border-bottom:3px solid var(--color-secondary);
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between; /* หรือ space-around / center ตามที่ต้องการ */
-  gap: 20px;
-  background-color: #fe6132;
-}
 .button {
   margin: 10px;
   border-radius: 10px;
@@ -223,12 +213,86 @@ h2 {
 .button:hover {
   background-color: silver;
 }
+
 .img1 img {
   width: 75px;
   height: 75px;
   margin: 15px;
   border-radius: 10px;
+  }
+  
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+  flex-grow: 1;
 }
+
+/*.btn-search {
+  padding: 8px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}*/
+
+ .input-search{
+   flex-grow: 1;
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 50px;
+    color:#000000;
+    position: absolute; /* ทำให้ input ไม่กระทบ layout */
+  }
+  .input-search::placeholder{
+    color:rgba(0,0,0,.8);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#000000;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+
+.input-search:focus{
+    width: 70%;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(0,0,0,.8);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    right: 50px; /* ขยับตำแหน่งเพื่อขยายทางซ้าย */
+    opacity: 1; /* แสดงเมื่อโฟกัส */
+  }
+  .btn-search:focus ~ .input-search{
+    width: 70%;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(0,0,0,.8);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    right: 50px;/* ขยับตำแหน่งเพื่อขยายทางซ้าย */
+  }
 
 nav {
     position: fixed;
@@ -244,11 +308,13 @@ nav {
     display: flex;
     align-items: center;  /* จัดแนวกลางในแนวตั้ง */
     justify-content: space-between;  /* ระยะห่างระหว่างแต่ละองค์ประกอบ */
+    gap: 5px;
   }
 }
 
 nav .links li {
     list-style: none;
+    display: flex;
 }
 
 nav .links a::before {
@@ -289,7 +355,21 @@ nav .icon-burger .line {
     transition: all .5s ease-in-out;
 }
 @media screen and (max-width: 768px) {
-    nav .logo {
+   .nav-container {
+    flex-wrap: wrap; /* ทำให้องค์ประกอบย่อขนาดในหน้าจอเล็ก */
+  }
+  
+  .input-search{
+    margin-bottom: 10px;
+    margin-right: 15px;
+    }
+
+  .btn-search {
+    margin-right: 40px;
+    margin-bottom: 10px;
+  }
+  
+  nav .logo {
         float: none;
         width: auto;
         justify-content: center;
@@ -331,38 +411,92 @@ nav .icon-burger .line {
 }
 
 .container {
+  margin-top: 7rem;
+  margin-left: 0.5rem;
+  justify-content: start;
+}
+
+.slider-wrapper {
+	position: relative;
+  max-width: 100%;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+
+.productspecial {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 210px)); /* ปรับขนาดคอลัมน์อัตโนมัติ */
-  background-color: #212b36;
-  gap: 1rem; /* ช่องว่างระหว่างสินค้า */
-  background-color: #212b36;
-  padding: 1rem;
-  justify-content: center;
-  margin-top: 5rem;
+  /* ปรับขนาดคอลัมน์อัตโนมัติ */
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  background-color: #F0F0F0;
+  gap: 5px; /* ช่องว่างระหว่างสินค้า */
+  padding: 0px;
+  justify-content: start;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 .product {
 text-align: center;
-background-color: black;
-margin: 15px;
+background-color: #ffffff;
+margin: 5px;
 border-radius: 10px;
 
 }
 .img img {
   width: 150px;
   height: 150px;
-  margin: 15px;
+  margin: 0px;
   border-radius: 10px;
+  justify-content: center;
 }
 .name {
   text-align: center;
   margin-bottom: 10px;
-  color: white;
+  color: black;
+}
+.tag {
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
 }
 .price {
   text-align: center;
   margin-bottom: 10px;
-  color: white;
+  color: black;
 }
 .buttoncontainer {
   text-align: center;
@@ -371,9 +505,15 @@ border-radius: 10px;
 }
 .button1 {
   text-align: center;
+  vertical-align: middle;
   background-color: #fe6132;
   color: black; 
   border: 0px;
+  margin: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
 }
 .button1:hover {
   background-color: #FE8662;

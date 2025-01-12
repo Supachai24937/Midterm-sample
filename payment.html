@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Payment</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/payment/body.css">
+    <script src="/product/script.js" defer></script>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!------ Include the above in your HEAD tag ---------->
+    <script src="/payment/script.js" defer></script>
+
+    <!-- The website JavaScript file -->
+    <script src="/product/script.js" defer></script>  
+  </head>
+  <body>
+  <header class="header">
+    <nav>
+        <div class="nav-container">
+            <div class="img1">
+                <a href="/index.html">
+                    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/SPJ%20(1).png?v=1732514145754" alt="Image" />
+                </a>
+            </div>
+           <div class="search-box">
+            <button id ="search-btn" class = "btn-search" >
+              <i class="fas fa-search"></i>
+            </button>
+            <input
+              id ="search-input"
+              type="text"
+              class="input-search"
+              placeholder="Find it!..."
+            />
+          </div>
+            <input type="checkbox" id="nav-toggle">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="mycart.html">My Cart</a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </div>
+    </nav>
+</header>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <div class="box">
+    <div class="container mt-5 p-3 rounded cart">
+        <div class="row no-gutters">
+            <div class="col-md-8">
+                <div class="product-details mr-2">
+                  <div class="d-flex flex-row align-items-center"><a href="product.html"><i class="fa fa-long-arrow-left"></i></a><a href="product.html"><span class="ml-2">Continue Shopping</span></a></div>
+                   <hr>
+                    <h6 class="mb-0">Shopping cart</h6>
+                    <div class="d-flex justify-content-between"><span>All items in your cart</span>
+                    </div>
+                  <div id="payment-container">
+                  <!------ Include the above in your HEAD tag ---------->
+                  <script src="/payment/script.js" defer></script>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="payment-info">
+                    <div class="d-flex justify-content-between align-items-center"><span>Card details</span><img class="rounded" src="https://i.imgur.com/WU501C8.jpg" width="30"></div><span class="type d-block mt-3 mb-1">Card type</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png"/></span> </label>
+
+<label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png"/></span> </label>
+
+<label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png"/></span> </label>
+
+<label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png"/></span> </label>
+                  
+                    <div><label class="credit-card-label">Name on card</label><input type="text" class="form-control credit-inputs" placeholder="Name"></div>
+                    <div><label class="credit-card-label">Card number</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"></div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="credit-card-label">Date</label><input type="text" class="form-control credit-inputs" placeholder="12/24"></div>
+                        <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="form-control credit-inputs" placeholder="342"></div>
+                    </div>
+                    <hr class="line">
+                    <div class="d-flex justify-content-between information"><span>Subtotal</span><span id="sumRevenue"></span></div>
+                    <div class="d-flex justify-content-between information"><span>Shipping</span><span id="charge"></span></div>
+                    <div class="d-flex justify-content-between information"><span>Total(Incl. taxes)</span><span id="totalValue"></span></div><button id="submit" class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button"><span id="button-text"></span><span>Checkout<i class="fa fa-long-arrow-right ml-1"></i></span></button></div>
+            </div>
+        </div>
+    </div>
+  </div> 
+    <div class ="footer">
+      <div class = "footertext">
+      Designed by Supachai Mongkolnit
+      </div>
+      </div>
+  </body>
+</html>

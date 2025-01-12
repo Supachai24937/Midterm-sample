@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-kpaukshtite-3270223.jpg?v=1732511687614",
+    "productname": "Product 1",
+    "price": "15.00",
+    "tag": "Best Selling"
+  },
+  
+  {
+    "id": "2",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-javon-swaby-197616-2783873.jpg?v=1732511699990",
+    "productname": "Product 2",
+    "price": "16.00",
+    "tag": "Best Selling"
+  },
+  
+  {
+    "id": "3",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4041391.jpg?v=1732511720835",
+    "productname": "Product 3",
+    "price": "17.00",
+    "tag": "Best Selling"
+  },
+  
+  {
+    "id": "4",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4202325.jpg?v=1732514005507",
+    "productname": "Product 4",
+    "price": "18.00",
+    "tag": "Best Selling"
+  },
+  
+  {
+    "id": "5",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4465121.jpg?v=1732511738787",
+    "productname": "Product 5",
+    "price": "19.00",
+    "tag": "Best Selling"
+  },
+  
+  {
+    "id": "6",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-drew-williams-1285451-2608495.jpg?v=1732511759705",
+    "productname": "Product 6",
+    "price": "20.00",
+    "tag": "Best Selling"
+  },
+  
+  {
+    "id": "7",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4210374.jpg?v=1732511774168",
+    "productname": "Product 7",
+    "price": "21.00",
+    "tag": "Normal"
+  },
+  
+  {
+    "id": "8",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-miloyoung-3602258.jpg?v=1732511781802",
+    "productname": "Product 8",
+    "price": "22.00",
+    "tag": "Normal"
+  },
+  
+  {
+    "id": "9",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-alexazabache-3907507.jpg?v=1732511811370",
+    "productname": "Product 9",
+    "price": "23.00",
+    "tag": "Normal"
+  },
+  
+  {
+    "id": "10",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4202325.jpg?v=1732511824643",
+    "productname": "Product 10",
+    "price": "24.00",
+    "tag": "Normal"
+  },
+  
+  {
+    "id": "11",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-eprism-studio-108171-335257.jpg?v=1732511833503",
+    "productname": "Product 11",
+    "price": "25.00",
+    "tag": "Normal"
+  },
+  
+  {
+    "id": "12",
+    "image":"https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-madebymath-90946.jpg?v=1732511841850",
+    "productname": "Product 12",
+    "price": "26.00",
+    "tag": "Normal"
+  }
+  
+]

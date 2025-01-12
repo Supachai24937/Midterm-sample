@@ -15,30 +15,44 @@
       Like the title, which appears on the browser tab but not inside the page
       Further down you'll see the content that displays in the page
     -->
-    <title>Hello World!</title>
+    <title>Products</title>
 
     <!-- The website stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-
-    <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/product/script.js" defer></script>
   </head>
   <body>
   <header class="header">
     <nav>
         <div class="nav-container">
             <div class="img1">
-                <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/SPJ%20(1).png?v=1732514145754">
+                <a href="/index.html">
                     <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/SPJ%20(1).png?v=1732514145754" alt="Image" />
                 </a>
             </div>
+           <div class="search-box">
+            <button id ="search-btn" class = "btn-search" >
+              <i class="fas fa-search"></i>
+            </button>
+            <input
+              id ="search-input"
+              type="text"
+              class="input-search"
+              placeholder="Find it!..."
+            />
+          </div>
             <input type="checkbox" id="nav-toggle">
             <ul class="links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="mycart.html">My Cart</a></li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
@@ -49,219 +63,32 @@
     </nav>
 </header>
     
-
-     <div class ="menu">
-  </div>
-    <div class ="container">
-      <div class ="product">
-<div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-kpaukshtite-3270223.jpg?v=1732511687614">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-kpaukshtite-3270223.jpg?v=1732511687614" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 1
-        </div>
-        <div class = "price">
-          $15.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      
-      <div class ="product">
-      <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-javon-swaby-197616-2783873.jpg?v=1732511699990">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-javon-swaby-197616-2783873.jpg?v=1732511699990" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 2
-        </div>
-        <div class = "price">
-          $16.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
+<section class="container">
+	<div class="slider-wrapper">
+		<div class="slider">
+			<img id="slide-1" src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/Yellow%20Organic%20Shape%20Orange%20Presentation.png?v=1736608719087" />
+			<img id="slide-2" src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/Green%20Aesthetic%20Natural%20Skincare%20Presentation_batcheditor_fotor.png?v=1736608724989" />
+			<img id="slide-3" src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/Yellow%20White%20Bold%20Fashion%20Product%20Promotion%20Landscape%20Banner_batcheditor_fotor.png?v=1736608715343" />
+		</div>
+		<div class="slider-nav">
+			<a href="#slide-1"></a>
+			<a href="#slide-2"></a>
+			<a href="#slide-3"></a>
+		</div>
+	</div>
+</section>
     
-      <div class ="product">
-        <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4041391.jpg?v=1732511720835">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4041391.jpg?v=1732511720835" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 3
-        </div>
-        <div class = "price">
-          $17.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      <div class ="product">
-        <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4202325.jpg?v=1732514005507">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4202325.jpg?v=1732514005507" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 4
-        </div>
-        <div class = "price">
-          $18.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      <div class ="product">
-      <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4465121.jpg?v=1732511738787">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4465121.jpg?v=1732511738787" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 5
-        </div>
-        <div class = "price">
-          $19.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      <div class ="product">
-      <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-drew-williams-1285451-2608495.jpg?v=1732511759705">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-drew-williams-1285451-2608495.jpg?v=1732511759705" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 6
-        </div>
-        <div class = "price">
-          $20.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      <div class ="product">
-      <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4210374.jpg?v=1732511774168">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4210374.jpg?v=1732511774168" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 7
-        </div>
-        <div class = "price">
-          $21.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      <div class ="product">
-      <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-miloyoung-3602258.jpg?v=1732511781802">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-miloyoung-3602258.jpg?v=1732511781802" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 8
-        </div>
-        <div class = "price">
-          $22.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      <div class ="product">
-        <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-alexazabache-3907507.jpg?v=1732511811370">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-alexazabache-3907507.jpg?v=1732511811370" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 9
-        </div>
-        <div class = "price">
-          $23.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      
-      <div class ="product">
-        <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4202325.jpg?v=1732511824643">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-karolina-grabowska-4202325.jpg?v=1732511824643" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 10
-        </div>
-        <div class = "price">
-          $24.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-        
-        
-      <div class ="product">
-      <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-eprism-studio-108171-335257.jpg?v=1732511833503">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-eprism-studio-108171-335257.jpg?v=1732511833503" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 11
-        </div>
-        <div class = "price">
-          $25.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-     
-      <div class ="product">
-        <div class="img">
-  <a href="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-madebymath-90946.jpg?v=1732511841850">
-    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/pexels-madebymath-90946.jpg?v=1732511841850" alt="Image" />
-  </a>
-</div>
-        <div class = "name">
-          Product 12
-        </div>
-        <div class = "price">
-          $26.00
-        </div>
-        <div class = "buttoncontainer">
-          <button class = "button1">Add to cart</button>
-        </div>
-      </div>
-      </div>
+    <div><h2>Best Selling Products</h2></div>
+    <!-- Section for products -->
+    <section class="productspecial" id="productspecial">
+      <!-- Placeholder for dynamic content -->
+      <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    </section>
+    
     <div class ="footer">
       <div class = "footertext">
-      Designed by Supachai Mongkonit
+      Designed by Supachai Mongkolnit
       </div>
       </div>
   </body>
