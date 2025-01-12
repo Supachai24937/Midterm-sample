@@ -138,6 +138,6 @@ $(document).ready(function () {
 
   // เรียกครั้งแรกตอนโหลดหน้าเว็บ
   loadCartItems();
-  $("#submit").on("click", () => window.location.href = "/Midterm-sample/payment.html");
+  $("#submit").on("click", () => window.location.href = "payment.html");
 });
 
