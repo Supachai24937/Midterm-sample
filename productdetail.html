@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Products</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/productdetail/body.css">
+    <script src="/product/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+<!------ Include the above in your HEAD tag ---------->
+  <script src="/productdetail/script.js" defer></script>
+  <script src="/product/script.js" defer></script>
+  </head>
+  <body>
+  <header class="header">
+    <nav>
+        <div class="nav-container">
+            <div class="img1">
+                <a href="/index.html">
+                    <img src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/SPJ%20(1).png?v=1732514145754" alt="Image" />
+                </a>
+            </div>
+           <div class="search-box">
+            <button id ="search-btn" class = "btn-search" >
+              <i class="fas fa-search"></i>
+            </button>
+            <input
+              id ="search-input"
+              type="text"
+              class="input-search"
+              placeholder="Find it!..."
+            />
+          </div>
+            <input type="checkbox" id="nav-toggle">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="mycart.html">My Cart</a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </div>
+    </nav>
+</header>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<div class="pd-wrap">
+	        <div class="row">
+	        	<div class="col-md-6">
+	        <div id="image-container"></div>
+	        	</div>
+	        	<div class="col-md-6">
+	        		<div class="product-dtl">
+        				<div class="product-info">
+		        			<div id="product-name"></div>
+		        			<div class="reviews-counter">
+								<div class="rate">
+								    <input type="radio" id="star5" name="rate" value="5" checked />
+								    <label for="star5" title="text">5 stars</label>
+								    <input type="radio" id="star4" name="rate" value="4" checked />
+								    <label for="star4" title="text">4 stars</label>
+								    <input type="radio" id="star3" name="rate" value="3" checked />
+								    <label for="star3" title="text">3 stars</label>
+								    <input type="radio" id="star2" name="rate" value="2" />
+								    <label for="star2" title="text">2 stars</label>
+								    <input type="radio" id="star1" name="rate" value="1" />
+								    <label for="star1" title="text">1 star</label>
+								  </div>
+								<span>3 Reviews</span>
+							</div>
+		        			<div class="product-price-discount"><span id="price"></span><span class="line-through">$100.00</span></div>
+		        		</div>
+	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	        			<div class="row">
+	        				<div class="col-md-6">
+	        					<label for="size">Size</label>
+								<select id="size" name="size" class="form-control">
+									<option>S</option>
+									<option>M</option>
+									<option>L</option>
+									<option>XL</option>
+								</select>
+	        				</div>
+	        				<div class="col-md-6">
+	        					<label for="color">Color</label>
+								<select id="color" name="color" class="form-control">
+									<option>Blue</option>
+									<option>Green</option>
+									<option>Red</option>
+								</select>
+	        				</div>
+	        			</div>
+	        			<div class="product-count">
+	        				<label for="size">Quantity</label>
+	        				<form action="#" class="display-flex">
+							    <div class="qtyminus">-</div>
+							    <input type="text" id="quantity" value="1" class="qty" readonly>
+							    <div class="qtyplus">+</div>
+							</form>
+							<button id="addToCart" class="round-black-btn">Add to Cart</button>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="product-info-tabs">
+		        <ul class="nav nav-tabs" id="myTab" role="tablist">
+				  	<li class="nav-item">
+				    	<a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews (0)</a>
+				  	</li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+				  	<div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+				  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+				  	</div>
+				  	<div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+				  		<div class="review-heading">REVIEWS</div>
+				  		<p class="mb-20">There are no reviews yet.</p>
+				  		<form class="review-form">
+		        			<div class="form-group">
+			        			<label>Your rating</label>
+			        			<div class="reviews-counter">
+									<div class="rate">
+									    <input type="radio" id="star5-result" name="rate" value="5" />
+									    <label for="star5-result" title="text">5 stars</label>
+									    <input type="radio" id="star4-result" name="rate" value="4" />
+									    <label for="star4-result" title="text">4 stars</label>
+									    <input type="radio" id="star3-result" name="rate" value="3" />
+									    <label for="star3-result" title="text">3 stars</label>
+									    <input type="radio" id="star2-result" name="rate" value="2" />
+									    <label for="star2-result" title="text">2 stars</label>
+									    <input type="radio" id="star1-result" name="rate" value="1" />
+									    <label for="star1-result" title="text">1 star</label>
+									</div>
+								</div>
+							</div>
+		        			<div class="form-group">
+			        			<label>Your message</label>
+			        			<textarea class="form-control" rows="10"></textarea>
+			        		</div>
+			        		<div class="row">
+				        		<div class="col-md-6">
+				        			<div class="form-group">
+					        			<input type="text" name="" class="form-control" placeholder="Name*">
+					        		</div>
+					        	</div>
+				        		<div class="col-md-6">
+				        			<div class="form-group">
+					        			<input type="text" name="" class="form-control" placeholder="Email Id*">
+					        		</div>
+					        	</div>
+					        </div>
+					        <button class="round-black-btn">Submit Review</button>
+			        	</form>
+				  	</div>
+				</div>
+			</div>
+			
+			<div style="text-align:center;font-size:14px;padding-bottom:20px;">Get free icon packs for your next project at <a href="http://iiicons.in/" target="_blank" style="color:#ff5e63;font-weight:bold;">www.iiicons.in</a></div>
+		</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="	sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <div class ="footer">
+      <div class = "footertext">
+      Designed by Supachai Mongkolnit
+      </div>
+      </div>
+  </body>
+</html>
