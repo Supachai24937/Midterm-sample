@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const productsContainer = document.querySelector(".products");
 
   let allProducts = []; // เก็บข้อมูลสินค้าทั้งหมด
+  let isSearchActive = false; // สถานะของปุ่ม Search
 
   // ฟังก์ชันโหลดสินค้าและแสดงผล
   const loadProducts = (products) => {
@@ -56,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ตรวจสอบว่าอยู่ในหน้า product.html หรือไม่
   if (productsContainer) {
-    // ดึงคำค้นหาจาก URL
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get("search") || ""; // ค่าค้นหา (ถ้าไม่มีให้เป็นค่าว่าง)
 
@@ -72,19 +72,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // การคลิกปุ่ม Search ในหน้าอื่น
+  // การคลิกปุ่ม Search
   if (searchBtn && searchInput) {
     searchBtn.addEventListener("click", () => {
-      const query = searchInput.value.trim().toLowerCase();
-      // นำทางไปที่ product.html พร้อมส่งคำค้นหาใน URL
-      window.location.href = `product.html?search=${query}`;
+      if (!isSearchActive) {
+        // สถานะแรก: โฟกัสช่องค้นหา
+        searchInput.style.display = "block"; // แสดงช่องค้นหา (ถ้าซ่อนไว้)
+        searchInput.focus();
+        isSearchActive = true; // เปลี่ยนสถานะ
+      } else {
+        // สถานะที่สอง: ค้นหา
+        const query = searchInput.value.trim().toLowerCase();
+        if (query) {
+          window.location.href = `product.html?search=${query}`;
+        }
+      }
     });
 
     searchInput.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
         const query = searchInput.value.trim().toLowerCase();
-        // นำทางไปที่ product.html พร้อมส่งคำค้นหาใน URL
-        window.location.href = `product.html?search=${query}`;
+        if (query) {
+          window.location.href = `product.html?search=${query}`;
+        }
+      }
+    });
+
+    // ถ้าช่องค้นหาว่าง ให้กลับไปสถานะแรก
+    searchInput.addEventListener("blur", () => {
+      if (!searchInput.value.trim()) {
+        isSearchActive = false; // รีเซ็ตสถานะ
       }
     });
   }
