@@ -73,7 +73,7 @@ $(document).ready(function () {
       }
 
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      window.location.href = "/mycart.html";
+      window.location.href = "mycart.html";
     });
   }
 
