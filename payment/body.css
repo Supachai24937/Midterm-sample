@@ -1,0 +1,131 @@
+.box{
+  margin-top: 6rem
+}
+
+.payment-info {
+  background: black;
+  padding: 10px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px
+}
+
+.product-details {
+  padding: 10px;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.cart {
+  background: #ffffff;
+}
+
+.p-about {
+  font-size: 12px;
+}
+
+.table-shadow {
+  -webkit-box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.42);
+  box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.42);
+}
+
+.type {
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.information span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.information {
+  margin-bottom: 5px;
+}
+
+label.radio {
+  cursor: pointer;
+}
+
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+label.radio span {
+  padding: 1px 12px;
+  border: 2px solid #ada9a9;
+  display: inline-block;
+  color: #8f37aa;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+label.radio input:checked + span {
+  border-color: #ffffff;
+  background-color: #fe6132;
+  color: #ffffff;
+}
+
+.credit-inputs {
+  background: rgb(102,102,221);
+  color: #000000 !important;
+  border-color: rgb(102,102,221);
+}
+
+.credit-inputs::placeholder {
+  color: #000000;
+  font-size: 13px;
+}
+
+.credit-card-label {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.form-control.credit-inputs:focus {
+  background: rgb(255,255,255);
+  border: rgb(255,255,255);
+}
+
+.line {
+  border-bottom: 1px solid rgb(102,102,221);
+}
+
+
+.items {
+  -webkit-box-shadow: 5px 5px 4px -1px rgba(0,0,0,0.25);
+  box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
+}
+
+.spec {
+  font-size: 11px;
+}
+
+.btn.btn-primary.btn-block.d-flex.justify-content-between.mt-3 {
+  background-color: #fe6132; /* สีพื้นหลังปุ่ม */
+  color: black; /* สีตัวอักษร */
+  border: none; /* ไม่มีขอบ */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* เพิ่มเอฟเฟกต์ */
+}
+
+.btn.btn-primary.btn-block.d-flex.justify-content-between.mt-3:hover {
+  background-color: #FE8662; /* สีพื้นหลังเมื่อ hover */
+}
+
+.d-flex.flex-row img {
+    width: 50px;
+    height: 50px;
+}
+
+.fa.fa-trash-o.ml-3.text-black-50.delete-btn {
+  cursor: pointer;
+}

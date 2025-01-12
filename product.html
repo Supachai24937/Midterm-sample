@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Products</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/product/style.css" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="/product/script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav-container">
+          <div class="img1">
+            <a href="/index.html">
+              <img
+                src="https://cdn.glitch.global/a5a15452-e1a5-4167-997f-7627595a9fcc/SPJ%20(1).png?v=1732514145754"
+                alt="Image"
+              />
+            </a>
+          </div>
+          <div class="search-box">
+            <button id ="search-btn" class = "btn-search" >
+              <i class="fas fa-search"></i>
+            </button>
+            <input
+              id ="search-input"
+              type="text"
+              class="input-search"
+              placeholder="Find it!..."
+            />
+          </div>
+          <input type="checkbox" id="nav-toggle" />
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="mycart.html">My Cart</a></li>
+          </ul>
+          <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </label>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <!-- Section for products -->
+      <section class="products" id="products">
+        <!-- Placeholder for dynamic content -->
+        <!-- The website JavaScript file -->
+        <script src="/script.js" defer></script>
+      </section>
+    </div>
+    <div class="footer">
+      <div class="footertext">Designed by Supachai Mongkolnit</div>
+    </div>
+  </body>
+</html>
